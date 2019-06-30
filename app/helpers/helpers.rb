@@ -8,7 +8,8 @@ class Helpers
     
 end
 
-# Accepts the session hash as an argument.
+# Accepts the session hash as an argument.Should return true if the user_id is in the session hash and false if not,
+
 def is_logged_in?
    !!session[:user_id]
 end
