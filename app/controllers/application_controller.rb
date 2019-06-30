@@ -10,7 +10,7 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
-  # find username input in db, if match redirect to /account, else error erb. 
+  # find username input in db, if match set settion to user ID, redirect to /account, else error erb. 
   post '/login' do
      @user = User.find_by(username: params[:username])
      if @user != nil && @user.password == params[:password]
